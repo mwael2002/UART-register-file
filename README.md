@@ -5,4 +5,6 @@ Design a parameterized UART register block that configures UART operating modes,
 ### rtl: Design code written in systemverilog
 ### tb: Testbench code
 ### scripts: Tcl scripts for running regression
-### results: Log files of all regression tests
+### results: Coverage reports and log files of all regression tests
+
+![Alt text](https://github.com/mwael2002/UART-register-file/blob/main/Screenshot%202026-05-23%20141217.png)
