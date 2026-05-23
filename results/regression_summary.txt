@@ -1,0 +1,20 @@
+==================================================
+           REGRESSION SUMMARY REPORT             
+==================================================
+Date : Wed Apr 08 23:47:49 +0200 2026
+
+TEST NAME                 STATUS
+--------------------------------------------------
+tc_01_reset               DONE  -> log: results/tc_01_reset.log
+tc_02_rw_basic            DONE  -> log: results/tc_02_rw_basic.log
+tc_03_random_wr           DONE  -> log: results/tc_03_random_wr.log
+tc_04_random_rd           DONE  -> log: results/tc_04_random_rd.log
+tc_05_raw                 DONE  -> log: results/tc_05_raw.log
+tc_06_baud                DONE  -> log: results/tc_06_baud.log
+tc_07_oob                 DONE  -> log: results/tc_07_oob.log
+tc_08_sticky              DONE  -> log: results/tc_08_sticky.log
+tc_09_rd_busy             DONE  -> log: results/tc_09_rd_busy.log
+tc_10_wr_busy             DONE  -> log: results/tc_10_wr_busy.log
+tc_all_tests              DONE  -> log: results/tc_all_tests.log
+
+NOTE: test_oob tests both test_oob_write and test_oob_read

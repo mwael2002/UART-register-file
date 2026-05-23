@@ -1,0 +1,526 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /dut_uart_regfile
+=== Design Unit: work.uart_regfile
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        30        30         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /dut_uart_regfile
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File rtl/uart_regfile.sv
+------------------------------------IF Branch------------------------------------
+    60                                       193     Count coming in to IF
+    60              1                         39         if(!rst_n)
+    63              1                         32         else if(wr_en && wr_addr==BAUD_RATE_REG_ADDR)
+                                             122     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    71                                       224     Count coming in to IF
+    71              1                         40         if (!rst_n) begin
+    81              1                        184         else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    74                                       120     Count coming in to IF
+    74              1                         40                     if(i==BAUD_RATE_REG_ADDR) begin
+    77              1                         80                     else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    83                                       184     Count coming in to IF
+    83              1                         30             mem[BAUD_RATE_REG_ADDR][BAUD_RATE_MSB:BAUD_RATE_LSB]<=(update_ok)?shadow_reg:mem[BAUD_RATE_REG_ADDR][BAUD_RATE_MSB:BAUD_RATE_LSB];
+    83              2                        154             mem[BAUD_RATE_REG_ADDR][BAUD_RATE_MSB:BAUD_RATE_LSB]<=(update_ok)?shadow_reg:mem[BAUD_RATE_REG_ADDR][BAUD_RATE_MSB:BAUD_RATE_LSB];
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    85                                       184     Count coming in to IF
+    85              1                         19             if(|uart_error) // Hardware Priority to write over software
+    88              1                          9             else if(wr_addr==ERROR_AND_BUSY_BITS_REG_ADDR && wr_en && wr_data[ERROR_BIT])
+                                             156     All False Count
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    91                                       184     Count coming in to IF
+    91              1                         15             if (wr_en && wr_addr == ENABLE_AND_MODE_REG_ADDR) begin
+                                             169     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    101                                      122     Count coming in to IF
+    101             1                         10         rd_data_a_tmp = (rd_addr_a>MAXIMUM_ADDR)?0:mem[rd_addr_a];
+    101             2                        112         rd_data_a_tmp = (rd_addr_a>MAXIMUM_ADDR)?0:mem[rd_addr_a];
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    102                                      122     Count coming in to IF
+    102             1                          9         rd_data_b_tmp = (rd_addr_b>MAXIMUM_ADDR)?0:mem[rd_addr_b];
+    102             2                        113         rd_data_b_tmp = (rd_addr_b>MAXIMUM_ADDR)?0:mem[rd_addr_b];
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    116                                      148     Count coming in to IF
+    116             1                         47                 if (!rst_n) begin
+    120             1                        101                 else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    121                                      101     Count coming in to IF
+    121             1                         10                     if(rd_addr_a>MAXIMUM_ADDR) begin
+    125             1                         91                     else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    129                                      101     Count coming in to IF
+    129             1                          9                     if(rd_addr_b>MAXIMUM_ADDR) begin
+    133             1                         92                     else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    140                                      253     Count coming in to IF
+    140             1                         39                 if (!rst_n) begin
+    144             1                        214                 else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    145                                      214     Count coming in to IF
+    145             1                         49                     rd_data_a<=(rd_addr_a==wr_addr && wr_en)?wr_data:rd_data_a_tmp;
+    145             2                        165                     rd_data_a<=(rd_addr_a==wr_addr && wr_en)?wr_data:rd_data_a_tmp;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    146                                      214     Count coming in to IF
+    146             1                         49                     rd_data_b<=(rd_addr_b==wr_addr && wr_en)?wr_data:rd_data_b_tmp;
+    146             2                        165                     rd_data_b<=(rd_addr_b==wr_addr && wr_en)?wr_data:rd_data_b_tmp;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                      16        16         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /dut_uart_regfile --
+
+  File rtl/uart_regfile.sv
+----------------Focused Condition View-------------------
+Line       63 Item    1  (wr_en && (wr_addr == 1))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+           wr_en         Y
+  (wr_addr == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:         11  wr_en_0               -                             
+  Row   2:          4  wr_en_1               (wr_addr == 1)                
+  Row   3:          7  (wr_addr == 1)_0      wr_en                         
+  Row   4:          4  (wr_addr == 1)_1      wr_en                         
+
+----------------Focused Condition View-------------------
+Line       74 Item    1  (i == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+  Input Term   Covered  Reason for no coverage   Hint
+ -----------  --------  -----------------------  --------------
+    (i == 1)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:         11  (i == 1)_0            -                             
+  Row   2:         11  (i == 1)_1            -                             
+
+----------------Focused Condition View-------------------
+Line       88 Item    1  (((wr_addr == 2) && wr_en) && wr_data[1])
+Condition totals: 3 of 3 input terms covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+  (wr_addr == 2)         Y
+           wr_en         Y
+      wr_data[1]         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:         11  (wr_addr == 2)_0      -                             
+  Row   2:          2  (wr_addr == 2)_1      (wr_data[1] && wr_en)         
+  Row   3:          4  wr_en_0               (wr_addr == 2)                
+  Row   4:          2  wr_en_1               (wr_data[1] && (wr_addr == 2))
+  Row   5:          5  wr_data[1]_0          ((wr_addr == 2) && wr_en)     
+  Row   6:          2  wr_data[1]_1          ((wr_addr == 2) && wr_en)     
+
+----------------Focused Condition View-------------------
+Line       91 Item    1  (wr_en && (wr_addr == 0))
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+      Input Term   Covered  Reason for no coverage   Hint
+     -----------  --------  -----------------------  --------------
+           wr_en         Y
+  (wr_addr == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:         11  wr_en_0               -                             
+  Row   2:          4  wr_en_1               (wr_addr == 0)                
+  Row   3:          7  (wr_addr == 0)_0      wr_en                         
+  Row   4:          4  (wr_addr == 0)_1      wr_en                         
+
+----------------Focused Condition View-------------------
+Line       101 Item    1  (rd_addr_a > 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+       Input Term   Covered  Reason for no coverage   Hint
+      -----------  --------  -----------------------  --------------
+  (rd_addr_a > 2)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:         11  (rd_addr_a > 2)_0     -                             
+  Row   2:          2  (rd_addr_a > 2)_1     -                             
+
+----------------Focused Condition View-------------------
+Line       102 Item    1  (rd_addr_b > 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+       Input Term   Covered  Reason for no coverage   Hint
+      -----------  --------  -----------------------  --------------
+  (rd_addr_b > 2)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:         11  (rd_addr_b > 2)_0     -                             
+  Row   2:          2  (rd_addr_b > 2)_1     -                             
+
+----------------Focused Condition View-------------------
+Line       121 Item    1  (rd_addr_a > 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+       Input Term   Covered  Reason for no coverage   Hint
+      -----------  --------  -----------------------  --------------
+  (rd_addr_a > 2)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:         11  (rd_addr_a > 2)_0     -                             
+  Row   2:          2  (rd_addr_a > 2)_1     -                             
+
+----------------Focused Condition View-------------------
+Line       129 Item    1  (rd_addr_b > 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+       Input Term   Covered  Reason for no coverage   Hint
+      -----------  --------  -----------------------  --------------
+  (rd_addr_b > 2)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:         11  (rd_addr_b > 2)_0     -                             
+  Row   2:          2  (rd_addr_b > 2)_1     -                             
+
+----------------Focused Condition View-------------------
+Line       145 Item    1  ((rd_addr_a == wr_addr) && wr_en)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+              Input Term   Covered  Reason for no coverage   Hint
+             -----------  --------  -----------------------  --------------
+  (rd_addr_a == wr_addr)         Y
+                   wr_en         Y
+
+     Rows:       Hits  FEC Target                Non-masking condition(s)      
+ ---------  ---------  --------------------      -------------------------     
+  Row   1:          9  (rd_addr_a == wr_addr)_0  -                             
+  Row   2:          5  (rd_addr_a == wr_addr)_1  wr_en                         
+  Row   3:         11  wr_en_0                   (rd_addr_a == wr_addr)        
+  Row   4:          5  wr_en_1                   (rd_addr_a == wr_addr)        
+
+----------------Focused Condition View-------------------
+Line       146 Item    1  ((rd_addr_b == wr_addr) && wr_en)
+Condition totals: 2 of 2 input terms covered = 100.00%
+
+              Input Term   Covered  Reason for no coverage   Hint
+             -----------  --------  -----------------------  --------------
+  (rd_addr_b == wr_addr)         Y
+                   wr_en         Y
+
+     Rows:       Hits  FEC Target                Non-masking condition(s)      
+ ---------  ---------  --------------------      -------------------------     
+  Row   1:          9  (rd_addr_b == wr_addr)_0  -                             
+  Row   2:          5  (rd_addr_b == wr_addr)_1  wr_en                         
+  Row   3:         11  wr_en_0                   (rd_addr_b == wr_addr)        
+  Row   4:          5  wr_en_1                   (rd_addr_b == wr_addr)        
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      32        32         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /dut_uart_regfile --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File rtl/uart_regfile.sv
+    1                                                module uart_regfile
+    2                                                #(parameter DATA_W=16,N_REGS=3,parameter bit READ_LATENCY=1)(
+    3                                                // Clock/Reset
+    4                                                input  logic                             clk,
+    5                                                input  logic                             rst_n,
+    6                                                
+    7                                                // Host Interface
+    8                                                input  logic                            wr_en,
+    9                                                input  logic   [$clog2(N_REGS)-1:0]     wr_addr,
+    10                                               input  logic   [DATA_W-1:0]             wr_data,
+    11                                               input  logic   [$clog2(N_REGS)-1:0]     rd_addr_a,
+    12                                               input  logic   [$clog2(N_REGS)-1:0]     rd_addr_b,
+    13                                               output logic   [DATA_W-1:0]             rd_data_a,
+    14                                               output logic   [DATA_W-1:0]             rd_data_b,
+    15                                               output logic                            rd_valid_a,
+    16                                               output logic                            rd_valid_b,
+    17                                               
+    18                                               // System Interface
+    19                                               input  logic                            uart_busy,
+    20                                               input  logic   [1:0]                    uart_error,
+    21                                               input  logic                            update_ok, 
+    22                                               output logic                            uart_enable,
+    23                                               output logic   [2:0]                    uart_mode,
+    24                                               output logic   [15:0]                   uart_rate
+    25                                               );
+    26                                               
+    27                                               // local parameter for the maximum address that can be written to/read from
+    28                                               localparam MAXIMUM_ADDR=N_REGS-1;
+    29                                               
+    30                                               // local parameters for constant register addresses 
+    31                                               localparam ERROR_AND_BUSY_BITS_REG_ADDR=2;
+    32                                               localparam ENABLE_AND_MODE_REG_ADDR=0;
+    33                                               localparam BAUD_RATE_REG_ADDR=1;
+    34                                               
+    35                                               // local parameter for bit fields
+    36                                               localparam ERROR_BIT=1;
+    37                                               localparam BUSY_BIT=0;
+    38                                               localparam ENABLE_BIT=0;
+    39                                               localparam BAUD_RATE_MSB=15;
+    40                                               localparam BAUD_RATE_LSB=0;
+    41                                               localparam MODE_MSB=3;
+    42                                               localparam MODE_LSB=1;
+    43                                               
+    44                                               // localparam for default baudrate = 9600 bps
+    45                                               localparam BAUD_RATE_DEFAULT_VALUE=9600;
+    46                                               
+    47                                               logic [DATA_W-1:0] mem [0:N_REGS-1];            // Register file
+    48                                               logic [DATA_W-1:0] rd_data_a_tmp,rd_data_b_tmp;     // localvariables store read data
+    49                                               logic [BAUD_RATE_MSB:BAUD_RATE_LSB] shadow_reg;     // Shadow Register
+    50                                               bit   [$clog2(N_REGS)-1:0] i;
+    51                                               
+    52                                               
+    53                                               // Output assignments
+    54              1                         71     assign uart_enable=mem[ENABLE_AND_MODE_REG_ADDR][ENABLE_BIT];
+    55              1                         71     assign uart_mode=mem[ENABLE_AND_MODE_REG_ADDR][MODE_MSB:MODE_LSB];
+    56              1                         71     assign uart_rate=mem[BAUD_RATE_REG_ADDR][BAUD_RATE_MSB:BAUD_RATE_LSB];
+    57                                               
+    58                                               // Shadow register for copying baud rate value before writing it to active register
+    59              1                        193     always_ff @(posedge clk) begin
+    60                                                   if(!rst_n)
+    61              1                         39             shadow_reg<=BAUD_RATE_DEFAULT_VALUE;
+    62                                                   
+    63                                                   else if(wr_en && wr_addr==BAUD_RATE_REG_ADDR)
+    64              1                         32             shadow_reg<=wr_data[BAUD_RATE_MSB:BAUD_RATE_LSB];    
+    65                                               end
+    66                                               
+    67                                               
+    68                                               // Write Operation
+    69              1                        224     always_ff @(posedge clk) begin
+    70                                               
+    71                                                   if (!rst_n) begin
+    72                                               
+    73              1                         40             for(i=0;i<=MAXIMUM_ADDR;i++) begin 
+    73              2                        120     
+    74                                                               if(i==BAUD_RATE_REG_ADDR) begin
+    75              1                         40                         mem[BAUD_RATE_REG_ADDR] <= BAUD_RATE_DEFAULT_VALUE;
+    76                                                               end    
+    77                                                               else
+    78              1                         80                     mem[i] <= 'b0;
+    79                                                       end
+    80                                                   end
+    81                                                   else begin
+    82              1                        184             mem[ERROR_AND_BUSY_BITS_REG_ADDR][BUSY_BIT]<=uart_busy;
+    83              1                        184             mem[BAUD_RATE_REG_ADDR][BAUD_RATE_MSB:BAUD_RATE_LSB]<=(update_ok)?shadow_reg:mem[BAUD_RATE_REG_ADDR][BAUD_RATE_MSB:BAUD_RATE_LSB];
+    84                                               
+    85                                                       if(|uart_error) // Hardware Priority to write over software
+    86              1                         19                     mem[ERROR_AND_BUSY_BITS_REG_ADDR][ERROR_BIT]<=1;       
+    87                                                       
+    88                                                       else if(wr_addr==ERROR_AND_BUSY_BITS_REG_ADDR && wr_en && wr_data[ERROR_BIT])
+    89              1                          9                     mem[wr_addr][ERROR_BIT]<=0;  
+    90                                               
+    91                                                       if (wr_en && wr_addr == ENABLE_AND_MODE_REG_ADDR) begin
+    92              1                         15                     mem[wr_addr][MODE_MSB:MODE_LSB]<=wr_data[MODE_MSB:MODE_LSB];
+    93              1                         15                     mem[wr_addr][ENABLE_BIT]<=wr_data[ENABLE_BIT];
+    94                                                       end
+    95                                                   end
+    96                                               end
+    97                                               
+    98                                               
+    99                                               // Read Operation
+    100             1                        133     always_comb begin
+    101             1                        133         rd_data_a_tmp = (rd_addr_a>MAXIMUM_ADDR)?0:mem[rd_addr_a];
+    102             1                        133         rd_data_b_tmp = (rd_addr_b>MAXIMUM_ADDR)?0:mem[rd_addr_b];
+    103                                              end
+    104                                              
+    105                                              // Generate combinational or sequential logic based on READ_LATENCY value
+    106                                              generate
+    107                                                  if (READ_LATENCY == 0) begin 
+    108                                                      assign rd_data_a  = (rd_addr_a==wr_addr && wr_en)?wr_data:rd_data_a_tmp;
+    109                                                      assign rd_data_b  = (rd_addr_b==wr_addr && wr_en)?wr_data:rd_data_b_tmp;
+    110                                                      assign rd_valid_a = (rd_addr_a>MAXIMUM_ADDR || !rst_n)?0:1;
+    111                                                      assign rd_valid_b = (rd_addr_b>MAXIMUM_ADDR || !rst_n)?0:1;
+    112                                                  end 
+    113                                                  else begin 
+    114                                                 
+    115             1                        148             always_ff @(posedge clk) begin
+    116                                                          if (!rst_n) begin
+    117             1                         47                     rd_valid_a<=0;
+    118             1                         47                     rd_valid_b<=0;
+    119                                                          end 
+    120                                                          else begin
+    121                                                              if(rd_addr_a>MAXIMUM_ADDR) begin
+    122             1                         10                         rd_valid_a<=0;
+    123                                                              end
+    124                                              
+    125                                                              else begin
+    126             1                         91                         rd_valid_a<=1;
+    127                                                              end
+    128                                              
+    129                                                              if(rd_addr_b>MAXIMUM_ADDR) begin
+    130             1                          9                         rd_valid_b<=0;
+    131                                                              end
+    132                                              
+    133                                                              else begin
+    134             1                         92                         rd_valid_b<=1;
+    135                                                              end
+    136                                                          end
+    137                                                      end
+    138                                              
+    139             1                        253             always_ff @(posedge clk) begin
+    140                                                          if (!rst_n) begin
+    141             1                         39                     rd_data_a<=0;
+    142             1                         39                     rd_data_b<=0;
+    143                                                          end
+    144                                                          else begin
+    145             1                        214                     rd_data_a<=(rd_addr_a==wr_addr && wr_en)?wr_data:rd_data_a_tmp;
+    146             1                        214                     rd_data_b<=(rd_addr_b==wr_addr && wr_en)?wr_data:rd_data_b_tmp;
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        266       264         2    99.24%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /dut_uart_regfile --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                               clk          11          11      100.00 
+                                            i[0-1]           0          11       50.00 
+                                      rd_addr_a[0]           3           5      100.00 
+                                      rd_addr_a[1]           3           6      100.00 
+                                      rd_addr_b[0]           3           5      100.00 
+                                      rd_addr_b[1]           3           6      100.00 
+                                      rd_data_a[0]           7           7      100.00 
+                                      rd_data_a[1]           6           6      100.00 
+                                    rd_data_a[2-3]           5           5      100.00 
+                                      rd_data_a[4]           3           3      100.00 
+                                      rd_data_a[5]           5           5      100.00 
+                                      rd_data_a[6]           4           4      100.00 
+                                    rd_data_a[7-9]           5           5      100.00 
+                                     rd_data_a[10]           6           6      100.00 
+                                  rd_data_a[11-15]           5           5      100.00 
+                                  rd_data_a_tmp[0]           6           6      100.00 
+                                rd_data_a_tmp[1-2]           4           4      100.00 
+                                  rd_data_a_tmp[3]           3           3      100.00 
+                                  rd_data_a_tmp[4]           1           1      100.00 
+                                rd_data_a_tmp[5-6]           2           2      100.00 
+                                rd_data_a_tmp[7-8]           4           4      100.00 
+                                  rd_data_a_tmp[9]           2           2      100.00 
+                                 rd_data_a_tmp[10]           4           4      100.00 
+                              rd_data_a_tmp[11-12]           2           2      100.00 
+                                 rd_data_a_tmp[13]           4           4      100.00 
+                              rd_data_a_tmp[14-15]           2           2      100.00 
+                                      rd_data_b[0]           7           7      100.00 
+                                      rd_data_b[1]           6           6      100.00 
+                                    rd_data_b[2-3]           5           5      100.00 
+                                      rd_data_b[4]           3           3      100.00 
+                                      rd_data_b[5]           5           5      100.00 
+                                      rd_data_b[6]           4           4      100.00 
+                                    rd_data_b[7-9]           5           5      100.00 
+                                     rd_data_b[10]           6           6      100.00 
+                                  rd_data_b[11-15]           5           5      100.00 
+                                  rd_data_b_tmp[0]           6           6      100.00 
+                                rd_data_b_tmp[1-2]           4           4      100.00 
+                                  rd_data_b_tmp[3]           3           3      100.00 
+                                  rd_data_b_tmp[4]           1           1      100.00 
+                                rd_data_b_tmp[5-6]           2           2      100.00 
+                                rd_data_b_tmp[7-8]           4           4      100.00 
+                                  rd_data_b_tmp[9]           2           2      100.00 
+                                 rd_data_b_tmp[10]           4           4      100.00 
+                              rd_data_b_tmp[11-12]           2           2      100.00 
+                                 rd_data_b_tmp[13]           4           4      100.00 
+                              rd_data_b_tmp[14-15]           2           2      100.00 
+                                        rd_valid_a          11          11      100.00 
+                                        rd_valid_b          11          11      100.00 
+                                             rst_n          11          11      100.00 
+                                   shadow_reg[0-3]           4           4      100.00 
+                                     shadow_reg[4]           3           3      100.00 
+                                  shadow_reg[5-15]           4           4      100.00 
+                                         uart_busy           2           2      100.00 
+                                       uart_enable           4           4      100.00 
+                                   uart_error[0-1]           2           2      100.00 
+                                    uart_mode[0-1]           3           3      100.00 
+                                      uart_mode[2]           2           2      100.00 
+                                    uart_rate[0-3]           2           2      100.00 
+                                      uart_rate[4]           1           1      100.00 
+                                   uart_rate[5-12]           2           2      100.00 
+                                     uart_rate[13]           1           1      100.00 
+                                  uart_rate[14-15]           2           2      100.00 
+                                         update_ok           2           2      100.00 
+                                        wr_addr[0]           3           5      100.00 
+                                        wr_addr[1]           2           6      100.00 
+                                        wr_data[0]           4           7      100.00 
+                                        wr_data[1]           5           7      100.00 
+                                        wr_data[2]           5           6      100.00 
+                                        wr_data[3]           5           5      100.00 
+                                        wr_data[4]           3           3      100.00 
+                                        wr_data[5]           5           5      100.00 
+                                        wr_data[6]           4           5      100.00 
+                                      wr_data[7-8]           5           5      100.00 
+                                        wr_data[9]           3           5      100.00 
+                                       wr_data[10]           4           5      100.00 
+                                       wr_data[11]           5           5      100.00 
+                                       wr_data[12]           3           5      100.00 
+                                       wr_data[13]           5           5      100.00 
+                                       wr_data[14]           3           5      100.00 
+                                       wr_data[15]           5           5      100.00 
+                                             wr_en           8           8      100.00 
+
+Total Node Count     =        133 
+Toggled Node Count   =        131 
+Untoggled Node Count =          2 
+
+Toggle Coverage      =      99.24% (264 of 266 bins)
+
+
+Total Coverage By Instance (filtered view): 99.81%
+

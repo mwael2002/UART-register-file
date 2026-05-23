@@ -1,0 +1,338 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb_uart_regfile/dut_uart_regfile/asser_tb
+=== Design Unit: work.asser_uart_regfile
+=================================================================================
+
+Assertion Coverage:
+    Assertions                      24        24         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A11
+                     tb/assertions_uart_regfile.sv(58)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A12
+                     tb/assertions_uart_regfile.sv(59)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A13
+                     tb/assertions_uart_regfile.sv(60)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A14
+                     tb/assertions_uart_regfile.sv(61)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A21
+                     tb/assertions_uart_regfile.sv(64)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A23
+                     tb/assertions_uart_regfile.sv(65)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A24
+                     tb/assertions_uart_regfile.sv(66)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A25
+                     tb/assertions_uart_regfile.sv(67)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A26
+                     tb/assertions_uart_regfile.sv(68)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A27
+                     tb/assertions_uart_regfile.sv(69)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A28
+                     tb/assertions_uart_regfile.sv(70)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A31
+                     tb/assertions_uart_regfile.sv(77)
+                                                        0          3
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A32
+                     tb/assertions_uart_regfile.sv(83)
+                                                        0          3
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A5
+                     tb/assertions_uart_regfile.sv(122)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A6
+                     tb/assertions_uart_regfile.sv(129)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A7
+                     tb/assertions_uart_regfile.sv(136)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A81
+                     tb/assertions_uart_regfile.sv(143)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A82
+                     tb/assertions_uart_regfile.sv(149)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A83
+                     tb/assertions_uart_regfile.sv(155)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A10
+                     tb/assertions_uart_regfile.sv(193)
+                                                        0          4
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A4_READ_LATENCY_1/A41
+                     tb/assertions_uart_regfile.sv(93)
+                                                        0          4
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A4_READ_LATENCY_1/A42
+                     tb/assertions_uart_regfile.sv(99)
+                                                        0          4
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A9_READ_LATENCY_1/A91
+                     tb/assertions_uart_regfile.sv(164)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A9_READ_LATENCY_1/A92
+                     tb/assertions_uart_regfile.sv(170)
+                                                        0          2
+
+=================================================================================
+=== Instance: /cov_pkg_uart_regfile
+=== Design Unit: work.cov_pkg_uart_regfile
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          9        na        na        na
+            Covergroup Bins         25        25         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cov_pkg_uart_regfile/uart_regfile_class/uart_regfile_class__1/cvr_gp 
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    25         25          -                      
+    missing/total bins:                                     0         25          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_rst_n                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       120          1          -    Covered              
+        bin auto[1]                                       234          1          -    Covered              
+    Coverpoint cp_uart_error                          100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       339          1          -    Covered              
+        bin auto[1]                                        15          1          -    Covered              
+        bin auto[2]                                         7          1          -    Covered              
+        bin auto[3]                                         4          1          -    Covered              
+    Coverpoint cp_uart_busy                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       359          1          -    Covered              
+        bin auto[1]                                         6          1          -    Covered              
+    Coverpoint cp_wr_en                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin wr_en_0                                       245          1          -    Covered              
+        bin wr_en_1                                       120          1          -    Covered              
+    Coverpoint cp_wr_addr                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin wr_oob[3]                              11                     -    Occurred             
+        bin wr_legal[0]                                    15          1          -    Covered              
+        bin wr_legal[1]                                    32          1          -    Covered              
+        bin wr_legal[2]                                    62          1          -    Covered              
+    Coverpoint cp_rd_addr_a                           100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin rd_a_oob[3]                            43                     -    Occurred             
+        bin rd_a_legal[0]                                 103          1          -    Covered              
+        bin rd_a_legal[1]                                  48          1          -    Covered              
+        bin rd_a_legal[2]                                  40          1          -    Covered              
+    Coverpoint cp_rd_addr_b                           100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin rd_b_oob[3]                            42                     -    Occurred             
+        bin rd_b_legal[0]                                 103          1          -    Covered              
+        bin rd_b_legal[1]                                  50          1          -    Covered              
+        bin rd_b_legal[2]                                  39          1          -    Covered              
+    Cross cp_RAW_A                                    100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <wr_legal[2],wr_en_1>                      10          1          -    Covered              
+            bin <wr_legal[1],wr_en_1>                      18          1          -    Covered              
+            bin <wr_legal[0],wr_en_1>                      13          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin wr_op_ign                            0                     -    ZERO                 
+    Cross cp_RAW_B                                    100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <wr_legal[2],wr_en_1>                      10          1          -    Covered              
+            bin <wr_legal[1],wr_en_1>                      18          1          -    Covered              
+            bin <wr_legal[0],wr_en_1>                      13          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin wr_op_ign                            0                     -    ZERO                 
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cov_pkg_uart_regfile/uart_regfile_class/uart_regfile_class__1/cvr_gp 
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    25         25          -                      
+    missing/total bins:                                     0         25          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_rst_n                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       120          1          -    Covered              
+        bin auto[1]                                       234          1          -    Covered              
+    Coverpoint cp_uart_error                          100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       339          1          -    Covered              
+        bin auto[1]                                        15          1          -    Covered              
+        bin auto[2]                                         7          1          -    Covered              
+        bin auto[3]                                         4          1          -    Covered              
+    Coverpoint cp_uart_busy                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin auto[0]                                       359          1          -    Covered              
+        bin auto[1]                                         6          1          -    Covered              
+    Coverpoint cp_wr_en                               100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin wr_en_0                                       245          1          -    Covered              
+        bin wr_en_1                                       120          1          -    Covered              
+    Coverpoint cp_wr_addr                             100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin wr_oob[3]                              11                     -    Occurred             
+        bin wr_legal[0]                                    15          1          -    Covered              
+        bin wr_legal[1]                                    32          1          -    Covered              
+        bin wr_legal[2]                                    62          1          -    Covered              
+    Coverpoint cp_rd_addr_a                           100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin rd_a_oob[3]                            43                     -    Occurred             
+        bin rd_a_legal[0]                                 103          1          -    Covered              
+        bin rd_a_legal[1]                                  48          1          -    Covered              
+        bin rd_a_legal[2]                                  40          1          -    Covered              
+    Coverpoint cp_rd_addr_b                           100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        illegal_bin rd_b_oob[3]                            42                     -    Occurred             
+        bin rd_b_legal[0]                                 103          1          -    Covered              
+        bin rd_b_legal[1]                                  50          1          -    Covered              
+        bin rd_b_legal[2]                                  39          1          -    Covered              
+    Cross cp_RAW_A                                    100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <wr_legal[2],wr_en_1>                      10          1          -    Covered              
+            bin <wr_legal[1],wr_en_1>                      18          1          -    Covered              
+            bin <wr_legal[0],wr_en_1>                      13          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin wr_op_ign                            0                     -    ZERO                 
+    Cross cp_RAW_B                                    100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <wr_legal[2],wr_en_1>                      10          1          -    Covered              
+            bin <wr_legal[1],wr_en_1>                      18          1          -    Covered              
+            bin <wr_legal[0],wr_en_1>                      13          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin wr_op_ign                            0                     -    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A11
+                     tb/assertions_uart_regfile.sv(58)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A12
+                     tb/assertions_uart_regfile.sv(59)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A13
+                     tb/assertions_uart_regfile.sv(60)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A14
+                     tb/assertions_uart_regfile.sv(61)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A21
+                     tb/assertions_uart_regfile.sv(64)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A23
+                     tb/assertions_uart_regfile.sv(65)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A24
+                     tb/assertions_uart_regfile.sv(66)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A25
+                     tb/assertions_uart_regfile.sv(67)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A26
+                     tb/assertions_uart_regfile.sv(68)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A27
+                     tb/assertions_uart_regfile.sv(69)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A28
+                     tb/assertions_uart_regfile.sv(70)
+                                                        0         11
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A31
+                     tb/assertions_uart_regfile.sv(77)
+                                                        0          3
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A32
+                     tb/assertions_uart_regfile.sv(83)
+                                                        0          3
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A5
+                     tb/assertions_uart_regfile.sv(122)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A6
+                     tb/assertions_uart_regfile.sv(129)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A7
+                     tb/assertions_uart_regfile.sv(136)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A81
+                     tb/assertions_uart_regfile.sv(143)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A82
+                     tb/assertions_uart_regfile.sv(149)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A83
+                     tb/assertions_uart_regfile.sv(155)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A10
+                     tb/assertions_uart_regfile.sv(193)
+                                                        0          4
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A4_READ_LATENCY_1/A41
+                     tb/assertions_uart_regfile.sv(93)
+                                                        0          4
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A4_READ_LATENCY_1/A42
+                     tb/assertions_uart_regfile.sv(99)
+                                                        0          4
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A9_READ_LATENCY_1/A91
+                     tb/assertions_uart_regfile.sv(164)
+                                                        0          2
+/tb_uart_regfile/dut_uart_regfile/asser_tb/A9_READ_LATENCY_1/A92
+                     tb/assertions_uart_regfile.sv(170)
+                                                        0          2
+
+Total Coverage By Instance (filtered view): 100.00%
+

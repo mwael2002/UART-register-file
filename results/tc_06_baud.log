@@ -1,0 +1,47 @@
+# End time: 23:48:05 on Apr 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.tb_uart_regfile -classdebug -coverage -onfinish stop "+TEST=tc_06_baud" -do "
+#         do scripts/waveform.do
+#         run -all;
+#         coverage save ${TESTNAME}_code_cov.ucdb -codeAll -instance dut_uart_regfile
+#         coverage save ${TESTNAME}_func_cov.ucdb -cvg -directive -assert
+#      " 
+# Start time: 23:48:06 on Apr 08,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.common_pkg_uart_regfile(fast)
+# Loading work.tasks_pkg_uart_reg_file(fast)
+# Loading work.cov_pkg_uart_regfile(fast)
+# Loading work.tb_uart_regfile(fast)
+# Loading work.uart_regfile(fast)
+# Loading work.asser_uart_regfile(fast)
+# 
+#         do scripts/waveform.do
+#         run -all
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: mwael  Hostname: MOHAMMAD-LAPTOP  ProcessID: 20648
+#           Attempting to use alternate WLF file "./wlfts7475b".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts7475b
+# ==================================================
+#  Running TEST = tc_06_baud
+# ==================================================
+# Test name: [test_baud_value] PASS,   Baud Write value = 13604, Baud Read value = 13604
+# Test name: [test_baud_value] PASS,   Baud Write value = 13604, Baud Read value = 13604
+# Test name: [test_baud_value] PASS,   Baud Write value = 24193, Baud Read value = 24193
+# Test name: [test_baud_value] PASS,   Baud Write value = 24193, Baud Read value = 24193
+# Test name: [test_baud_value] PASS,   Baud Write value = 54793, Baud Read value = 54793
+# Test name: [test_baud_value] PASS,   Baud Write value = 54793, Baud Read value = 54793
+# Test name: [test_baud_value] PASS,   Baud Write value = 22115, Baud Read value = 22115
+# Test name: [test_baud_value] PASS,   Baud Write value = 22115, Baud Read value = 22115
+# Test name: [test_baud_value] PASS,   Baud Write value = 31501, Baud Read value = 31501
+# Test name: [test_baud_value] PASS,   Baud Write value = 31501, Baud Read value = 31501
+# TEST tc_06_baud DONE
+# ** Note: $stop    : tb/tb_uart_regfile.sv(69)
+#    Time: 58 ns  Iteration: 1  Instance: /tb_uart_regfile
+# Break in Module tb_uart_regfile at tb/tb_uart_regfile.sv line 69
+# Stopped at tb/tb_uart_regfile.sv line 69
+# 
+#         coverage save ${TESTNAME}_code_cov.ucdb -codeAll -instance dut_uart_regfile
+#         coverage save ${TESTNAME}_func_cov.ucdb -cvg -directive -assert
+#      
